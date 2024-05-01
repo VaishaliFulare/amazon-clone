@@ -40,7 +40,9 @@ body{
     margin-bottom: 0.006px; /* Added margin for spacing */
     margin-left: 15px;
 }
-
+.p-10{
+    padding: 10px;
+}
 .address-sec{
     color: white;
     margin-left: 5px;
@@ -60,13 +62,12 @@ body{
 }
 
 /**Box3**/
-.nav-search{
+.nav-search , .nav-search-mobile{
     display: flex;
-    background-color: pink;
+    /* background-color: pink; */
     width: 620px;
     height: 40px;
     justify-content: space-evenly;
-    border-radius: 4px;
 }
 .search-select{
     background-color: #f3f3f3;
@@ -80,6 +81,7 @@ body{
     width: 100%;
     border: none;
     font-size: 1rem;
+    border-radius: 4px;
 }
 
 .search-iocn{
@@ -93,8 +95,8 @@ body{
     border-bottom-right-radius: 4px;
     color: #0f1111;
 }
-.nav-search{
-    border: 2px solid orange;
+.nav-search {
+    /* border: 2px solid orange; */
 }
 /**Box4**/
 span{
@@ -121,12 +123,16 @@ span{
     justify-content: space-evenly;
 }
 .panel-ops p{
-    display: inline;
-    margin-left: 15px;
+    margin: 0px!important;
 }
 .panel-ops{
+    display: flex;
     width: 70%;
+    overflow: auto;
     font-size: 0.85rem;
+    align-items: center;
+    gap:15px;
+    margin-left: 10px;
 }
 .panel-deal{
     font-size: 0.9rem;
@@ -169,6 +175,7 @@ span{
     margin-top: 15px;
     background-color: white;
     padding: 20px 0px 15px;
+    border-radius: 10px;
 }
 .box-image{
 height: 300px;
@@ -242,7 +249,55 @@ padding-top: 25px;
     padding-top: 5px;
     text-align: center;
 }
+.nav-search-mobile{
+    visibility: hidden;
+}
 .nav-singin p, .nav-returns p{
     margin-top: unset;
     margin-bottom: unset;
+}
+ul{
+    list-style: none;
+}
+@media screen and  (max-width : 425px)  {
+    .box{
+        width: 100%!important;
+        margin: 10px;
+    }
+    .am-2{
+        display: none;
+    }
+    .hero-section{
+        height: 160px!important;
+    }
+    .hero-msg {
+        font-size: 0.55rem!important;
+        height: 30px!important;
+    }
+    .nav-search ,.nav-returns ,.nav-adress{
+      display: none!important;
+    }
+    .nav-search-mobile{
+        visibility: visible!important;
+    }
+    
+}
+@media (min-width : 767px) and  (max-width : 769px)  {
+    .nav-search{
+        width: 500px!important;
+        margin: 0 10px;
+    }
+    .nav-returns ,.nav-adress{
+        display: none!important;
+    }
+    .box{
+        width: 45%!important;
+    }
+}
+@media (min-width : 770px) and  (max-width : 1024px)  {
+    .box{
+        width: 31%!important;
+    }
+   
+    
 }
